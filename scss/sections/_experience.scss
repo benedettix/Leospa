@@ -1,0 +1,80 @@
+.experience {
+  display: block;
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+  &__section-heading {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  &__sec-title {
+    color: $h-color;
+    margin-bottom: 32px;
+  }
+
+  &__desc {
+    color: $p-color;
+    margin-bottom: 0;
+  }
+
+  &__post {
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px $box-shadow-color;
+
+    > img {
+      width: 100%;
+    }
+
+    &__memb-info {
+      background-color: #fff;
+      box-shadow: 0 5px 20px #f0f0f0;
+      cursor: pointer;
+      padding: 20px 15px;
+      text-align: center;
+
+      &--memb-social {
+        text-align: center;
+        visibility: hidden;
+
+        li {
+          display: inline-block;
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+          a {
+            @include socnet(cover, block, 40px, -9999px, 0.3s, 40px);
+          }
+          a.fb {
+            background-image: url("/img/facebook.png");
+          }
+          a.tw {
+            background-image: url("/img/twitter.png");
+          }
+          a.yt {
+            background-image: url("/img/youtube.png");
+          }
+          a.in {
+            background-image: url("/img/instagram.png");
+          }
+        }
+      }
+
+      a {
+        color: $link-color;
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__post {
+    &__memb-info {
+      &:hover {
+        ul {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
